@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECEC English Club | University Student Life</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            ecec: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              200: '#fed7aa',
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #fffaf5;
+      color: #1f2937;
+      scroll-behavior: smooth;
+    }
+
+    /* 3D Flashcard Flip CSS */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 1rem;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Matching Game Animations */
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      75% { transform: translateX(6px); }
+    }
+    .animate-shake {
+      animation: shake 0.35s ease-in-out;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-ecec-500 selection:text-white">
+
+  <!-- Sticky Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-ecec-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-ecec-500 to-ecec-600 flex items-center justify-center text-white font-extrabold text-xl shadow-md shadow-ecec-500/30">
+          E
+        </div>
+        <div>
+          <span class="font-extrabold text-lg tracking-tight text-ecec-700">ECEC ENGLISH CLUB</span>
+          <span class="hidden sm:inline-block ml-2 text-xs font-semibold uppercase px-2.5 py-0.5 rounded-full bg-ecec-100 text-ecec-700">UED - University of Science and Education</span>
+        </div>
+      </div>
+      <nav class="flex items-center gap-2 sm:gap-4 text-sm font-semibold text-gray-600">
+        <a href="#flashcards" class="hover:text-ecec-600 px-2 py-1 rounded-lg hover:bg-ecec-50 transition">1. Flashcards</a>
+        <a href="#patterns" class="hover:text-ecec-600 px-2 py-1 rounded-lg hover:bg-ecec-50 transition">2. Patterns</a>
+        <a href="#speaking" class="hover:text-ecec-600 px-2 py-1 rounded-lg hover:bg-ecec-50 transition">3. Q&amp;A Practice</a>
+        <a href="#matching" class="hover:text-ecec-600 px-2 py-1 rounded-lg hover:bg-ecec-50 transition">4. Matching Game</a>
+        <a href="#boardgame" class="hover:text-ecec-600 px-2 py-1 rounded-lg hover:bg-ecec-50 transition">5. Team Game</a>
+        <a href="#about" class="bg-ecec-500 hover:bg-ecec-600 text-white px-3 py-1.5 rounded-lg shadow-sm transition">About ECEC</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-ecec-600 via-ecec-500 to-amber-500 text-white py-14 px-4">
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-semibold mb-4 border border-white/30">
+        <i class="fa-solid fa-fire text-amber-200"></i>
+        <span>ECEC – ALL WE NEED IS PASSION</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
+        University Student Life &amp; Self-Introduction
+      </h1>
+      <p class="text-ecec-50 text-base sm:text-lg max-w-2xl mx-auto mb-6">
+        Interactive English Club Activity Hub. Master essential campus vocabulary (A1–B1), challenge yourself with B2 expressions, practice speaking, and compete in team games!
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="#flashcards" class="bg-white text-ecec-700 hover:bg-ecec-50 font-bold px-6 py-3 rounded-xl shadow-lg transition flex items-center gap-2">
+          <i class="fa-solid fa-layer-group"></i> Start Learning
+        </a>
+        <a href="#matching" class="bg-ecec-800/40 hover:bg-ecec-800/60 border border-white/30 text-white font-bold px-6 py-3 rounded-xl transition flex items-center gap-2">
+          <i class="fa-solid fa-gamepad"></i> Jump to Games
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-16">
+
+    <!-- PART 1: 3D VOCABULARY FLASHCARDS -->
+    <section id="flashcards" class="scroll-mt-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-ecec-600 bg-ecec-100 px-3 py-1 rounded-full">Part 1 • Interactive 3D Cards</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2">Vocabulary Flashcards</h2>
+          <p class="text-gray-600 text-sm sm:text-base">Click any card to flip it in 3D! Click the speaker icon to hear the pronunciation.</p>
+        </div>
+        <!-- Filter Buttons -->
+        <div class="flex gap-2">
+          <button onclick="filterCards('all')" id="filter-all" class="px-4 py-2 rounded-xl text-sm font-bold bg-ecec-500 text-white shadow-sm transition">All Cards (12)</button>
+          <button onclick="filterCards('A1-B1')" id="filter-A1-B1" class="px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-700 border border-ecec-200 hover:bg-ecec-50 transition">A1–B1 Core (7)</button>
+          <button onclick="filterCards('B2')" id="filter-B2" class="px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-700 border border-ecec-200 hover:bg-ecec-50 transition">🔥 B2 Challenge (5)</button>
+        </div>
+      </div>
+
+      <!-- Flashcards Grid -->
+      <div id="flashcard-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Populated by JavaScript -->
+      </div>
+    </section>
+
+    <!-- PART 2: USEFUL SENTENCE PATTERNS -->
+    <section id="patterns" class="scroll-mt-20">
+      <div class="mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-ecec-600 bg-ecec-100 px-3 py-1 rounded-full">Part 2 • Speaking Templates</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2">Useful Sentence Patterns for Self-Introduction</h2>
+        <p class="text-gray-600 text-sm sm:text-base">Fill in the orange blanks with your own information. Try upgrading at least one sentence to the B2 column!</p>
+      </div>
+
+      <div class="overflow-x-auto bg-white rounded-2xl shadow-sm border border-ecec-200">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-gradient-to-r from-ecec-500 to-ecec-600 text-white">
+              <th class="p-4 text-sm font-extrabold uppercase tracking-wider w-1/5">Topic</th>
+              <th class="p-4 text-sm font-extrabold uppercase tracking-wider w-2/5">Standard Level (A1 – B1)</th>
+              <th class="p-4 text-sm font-extrabold uppercase tracking-wider w-2/5">🔥 Upgraded Level (B2 Challenge)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-ecec-100 text-sm sm:text-base">
+            <tr class="hover:bg-ecec-50/50 transition">
+              <td class="p-4 font-bold text-ecec-800"><i class="fa-solid fa-graduation-cap mr-2 text-ecec-500"></i>Year &amp; Major</td>
+              <td class="p-4">
+                • I am a <span class="font-bold text-ecec-600 underline decoration-dotted">[freshman / sophomore]</span> at <span class="font-bold text-ecec-600 underline decoration-dotted">[University]</span>.<br>
+                • I major in <span class="font-bold text-ecec-600 underline decoration-dotted">[English Education / IT]</span>.
+              </td>
+              <td class="p-4 bg-amber-50/40">
+                • Currently, I am a <span class="font-bold text-ecec-600 underline decoration-dotted">[year]</span> pursuing a Bachelor's degree in <span class="font-bold text-ecec-600 underline decoration-dotted">[Major]</span>.
+              </td>
+            </tr>
+            <tr class="hover:bg-ecec-50/50 transition">
+              <td class="p-4 font-bold text-ecec-800"><i class="fa-solid fa-heart mr-2 text-ecec-500"></i>Why This Major?</td>
+              <td class="p-4">
+                • I chose this major because I love <span class="font-bold text-ecec-600 underline decoration-dotted">[teaching / working with technology]</span>.
+              </td>
+              <td class="p-4 bg-amber-50/40">
+                • What really drew me to <span class="font-bold text-ecec-600 underline decoration-dotted">[Major]</span> is my strong passion for <span class="font-bold text-ecec-600 underline decoration-dotted">[field / skill]</span>.
+              </td>
+            </tr>
+            <tr class="hover:bg-ecec-50/50 transition">
+              <td class="p-4 font-bold text-ecec-800"><i class="fa-solid fa-house-user mr-2 text-ecec-500"></i>Living Situation</td>
+              <td class="p-4">
+                • Currently, I live in a <span class="font-bold text-ecec-600 underline decoration-dotted">[dormitory / shared apartment]</span> with <span class="font-bold text-ecec-600 underline decoration-dotted">[two roommates]</span>.
+              </td>
+              <td class="p-4 bg-amber-50/40">
+                • I am currently staying in a <span class="font-bold text-ecec-600 underline decoration-dotted">[dorm / rented flat]</span>, which gives me a great sense of independence.
+              </td>
+            </tr>
+            <tr class="hover:bg-ecec-50/50 transition">
+              <td class="p-4 font-bold text-ecec-800"><i class="fa-solid fa-users mr-2 text-ecec-500"></i>Free Time &amp; Club Goal</td>
+              <td class="p-4">
+                • In my free time, I usually <span class="font-bold text-ecec-600 underline decoration-dotted">[play sports / listen to music]</span>.<br>
+                • I joined ECEC to <span class="font-bold text-ecec-600 underline decoration-dotted">[practice speaking English]</span>.
+              </td>
+              <td class="p-4 bg-amber-50/40">
+                • Joining ECEC is a great way for me to <span class="font-bold text-ecec-600">step out of my comfort zone</span> and expand my social circle.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PART 3: SPEAKING PRACTICE Q&A -->
+    <section id="speaking" class="scroll-mt-20">
+      <div class="mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-ecec-600 bg-ecec-100 px-3 py-1 rounded-full">Part 3 • Pair &amp; Group Discussion</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2">Guided Speaking Practice</h2>
+        <p class="text-gray-600 text-sm sm:text-base">Follow the step-by-step flow (➔) to build your answer, then click the button to reveal the sample responses.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Question 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-ecec-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-800">Level: A1 – A2</span>
+              <span class="text-xs font-bold text-ecec-500">Question #1</span>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3">
+              Can you introduce yourself and tell us about your major?
+            </h3>
+            <div class="bg-ecec-50 border border-ecec-200 rounded-xl p-3.5 text-sm text-gray-700 mb-4">
+              <p class="font-bold text-ecec-700 mb-1"><i class="fa-regular fa-lightbulb mr-1"></i> Speaking Flow Guide:</p>
+              <p class="font-medium">Greeting &amp; Name <span class="text-ecec-600 font-bold">➔</span> University Year <span class="text-ecec-600 font-bold">➔</span> Your Major <span class="text-ecec-600 font-bold">➔</span> One reason why you enjoy it.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleAnswer('ans-1', this)" class="w-full py-2.5 px-4 rounded-xl font-bold text-sm bg-ecec-100 text-ecec-700 hover:bg-ecec-500 hover:text-white transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-eye"></i> <span>Show Sample Answer</span>
+            </button>
+            <div id="ans-1" class="hidden mt-4 p-4 rounded-xl bg-gray-50 border border-gray-200 text-sm space-y-2">
+              <p><strong class="text-ecec-600">Standard (A1–B1):</strong> "Hi everyone! My name is Minh. I am a <b>freshman</b> at the University of Science and Education. I <b>major in</b> English Education. I chose this major because I love working with students and sharing knowledge."</p>
+              <p><strong class="text-amber-600">B2 Upgrade:</strong> "Hello everyone, I’m Minh. Currently, I'm a <b>sophomore</b> pursuing a degree in Primary Education. What really drew me to this field is my passion for inspiring children. Today, I want to <b>step out of my comfort zone</b> and make new friends at ECEC!"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-ecec-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800">Level: A2 – B1</span>
+              <span class="text-xs font-bold text-ecec-500">Question #2</span>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3">
+              Do you live in a dormitory or rent an apartment outside? Which one do you prefer?
+            </h3>
+            <div class="bg-ecec-50 border border-ecec-200 rounded-xl p-3.5 text-sm text-gray-700 mb-4">
+              <p class="font-bold text-ecec-700 mb-1"><i class="fa-regular fa-lightbulb mr-1"></i> Speaking Flow Guide:</p>
+              <p class="font-medium">Current place <span class="text-ecec-600 font-bold">➔</span> 1 Main Advantage (cost / freedom) <span class="text-ecec-600 font-bold">➔</span> 1 Small Disadvantage (noise / curfew).</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleAnswer('ans-2', this)" class="w-full py-2.5 px-4 rounded-xl font-bold text-sm bg-ecec-100 text-ecec-700 hover:bg-ecec-500 hover:text-white transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-eye"></i> <span>Show Sample Answer</span>
+            </button>
+            <div id="ans-2" class="hidden mt-4 p-4 rounded-xl bg-gray-50 border border-gray-200 text-sm space-y-2">
+              <p><strong class="text-ecec-600">Standard (A1–B1):</strong> "Right now, I <b>rent a shared apartment</b> near my campus with two roommates. I prefer renting a room because I have more freedom and can cook my own meals, even though it is more expensive than a <b>dormitory</b>."</p>
+              <p><strong class="text-amber-600">B2 Upgrade:</strong> "I'm currently staying in the university <b>dormitory</b>. Honestly, I prefer it because it reduces my <b>living expenses</b> significantly, although it can get a bit noisy when I need to <b>hit the books</b>."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-ecec-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-100 text-purple-800">Level: B1</span>
+              <span class="text-xs font-bold text-ecec-500">Question #3</span>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3">
+              How is university life different from high school for you?
+            </h3>
+            <div class="bg-ecec-50 border border-ecec-200 rounded-xl p-3.5 text-sm text-gray-700 mb-4">
+              <p class="font-bold text-ecec-700 mb-1"><i class="fa-regular fa-lightbulb mr-1"></i> Speaking Flow Guide:</p>
+              <p class="font-medium">Flexible schedule <span class="text-ecec-600 font-bold">➔</span> Self-study &amp; group projects <span class="text-ecec-600 font-bold">➔</span> Joining clubs &amp; part-time jobs.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleAnswer('ans-3', this)" class="w-full py-2.5 px-4 rounded-xl font-bold text-sm bg-ecec-100 text-ecec-700 hover:bg-ecec-500 hover:text-white transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-eye"></i> <span>Show Sample Answer</span>
+            </button>
+            <div id="ans-3" class="hidden mt-4 p-4 rounded-xl bg-gray-50 border border-gray-200 text-sm space-y-2">
+              <p><strong class="text-ecec-600">Standard (B1):</strong> "For me, university life gives me much more independence than high school. Professors don't check our homework every single day, so self-study is super important. Also, I have more free time to join <b>extracurricular activities</b> like ECEC and work a <b>part-time job</b>."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="bg-white rounded-2xl p-6 border border-ecec-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-ecec-100 text-ecec-800">🔥 Level: B2 Challenge</span>
+              <span class="text-xs font-bold text-ecec-500">Question #4</span>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3">
+              How do you balance your studies, part-time job, and social life?
+            </h3>
+            <div class="bg-ecec-50 border border-ecec-200 rounded-xl p-3.5 text-sm text-gray-700 mb-4">
+              <p class="font-bold text-ecec-700 mb-1"><i class="fa-regular fa-lightbulb mr-1"></i> Speaking Flow Guide:</p>
+              <p class="font-medium">Admit the challenge <span class="text-ecec-600 font-bold">➔</span> Time management tool (planner / calendar) <span class="text-ecec-600 font-bold">➔</span> Prioritize deadlines.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleAnswer('ans-4', this)" class="w-full py-2.5 px-4 rounded-xl font-bold text-sm bg-ecec-100 text-ecec-700 hover:bg-ecec-500 hover:text-white transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-eye"></i> <span>Show Sample Answer</span>
+            </button>
+            <div id="ans-4" class="hidden mt-4 p-4 rounded-xl bg-gray-50 border border-gray-200 text-sm space-y-2">
+              <p><strong class="text-amber-600">B2 Sample:</strong> "To be honest, it can be tough to <b>strike a balance between</b> academics and my <b>part-time job</b>. To stay on track, I use a digital calendar to plan my week in advance so I can always <b>meet the deadline</b> without having to <b>pull an all-nighter</b> before exams."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PART 4: INTERACTIVE MATCHING GAME -->
+    <section id="matching" class="scroll-mt-20">
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-ecec-200 shadow-md">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-ecec-100">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-ecec-600 bg-ecec-100 px-3 py-1 rounded-full">Part 4 • Interactive Mini-Game</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2">Speed Vocabulary Matching</h2>
+            <p class="text-gray-600 text-sm">Click a <b>Word/Idiom</b> on the left, then click its matching <b>Definition</b> on the right!</p>
+          </div>
+          <div class="flex items-center gap-3 self-start md:self-auto">
+            <div class="bg-ecec-50 border border-ecec-200 px-4 py-2 rounded-xl text-center">
+              <span class="block text-xs text-gray-500 font-semibold uppercase">Matches</span>
+              <span id="match-score" class="text-lg font-extrabold text-ecec-600">0 / 8</span>
+            </div>
+            <div class="bg-ecec-50 border border-ecec-200 px-4 py-2 rounded-xl text-center">
+              <span class="block text-xs text-gray-500 font-semibold uppercase">Time</span>
+              <span id="match-timer" class="text-lg font-extrabold text-gray-800">00:00</span>
+            </div>
+            <button onclick="initMatchingGame()" class="bg-ecec-500 hover:bg-ecec-600 text-white font-bold px-4 py-3 rounded-xl shadow-sm transition flex items-center gap-2 text-sm">
+              <i class="fa-solid fa-rotate-right"></i> Reset
+            </button>
+          </div>
+        </div>
+
+        <!-- Feedback Banner -->
+        <div id="match-feedback" class="hidden mb-6 p-4 rounded-2xl bg-green-50 border border-green-300 text-green-800 text-center font-bold text-lg">
+          🎉 Congratulations! You matched all 8 expressions!
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Left Column: Terms -->
+          <div>
+            <h3 class="text-xs font-extrabold uppercase tracking-wider text-ecec-600 mb-3">Column A: Words &amp; Idioms</h3>
+            <div id="match-terms" class="space-y-3"></div>
+          </div>
+          <!-- Right Column: Definitions -->
+          <div>
+            <h3 class="text-xs font-extrabold uppercase tracking-wider text-ecec-600 mb-3">Column B: English Definitions</h3>
+            <div id="match-defs" class="space-y-3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PART 5: VISUAL TEAM BOARD GAME ("CAMPUS SURVIVAL") -->
+    <section id="boardgame" class="scroll-mt-20">
+      <div class="bg-gradient-to-b from-ecec-900 to-gray-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-ecec-300 bg-ecec-800/80 px-3 py-1 rounded-full border border-ecec-600">Part 5 • Visual Team Battle</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold mt-2 text-white">🏆 Campus Survival: Mystery Box Arena</h2>
+            <p class="text-gray-300 text-sm">Each team starts with <b>100 Energy Points (⚡)</b>. Take turns choosing a box, completing the speaking mission in 30 seconds, and updating your team's live score!</p>
+          </div>
+          <button onclick="resetBoardGame()" class="self-start md:self-auto bg-ecec-600 hover:bg-ecec-500 text-white font-bold px-4 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
+            <i class="fa-solid fa-arrows-rotate"></i> Reset Board &amp; Scores
+          </button>
+        </div>
+
+        <!-- Live Team Scoreboard -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <!-- Team 1 -->
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4 flex flex-col items-center">
+            <span class="text-xs uppercase font-bold tracking-wider text-ecec-300">Team 1</span>
+            <div class="text-3xl font-extrabold my-2 text-amber-400"><span id="score-t1">100</span> ⚡</div>
+            <div class="flex gap-1.5">
+              <button onclick="updateTeamScore(1, -20)" class="px-2.5 py-1 rounded-lg bg-red-500/30 hover:bg-red-500/50 text-red-200 text-xs font-bold">-20</button>
+              <button onclick="updateTeamScore(1, 10)" class="px-2.5 py-1 rounded-lg bg-green-500/30 hover:bg-green-500/50 text-green-200 text-xs font-bold">+10</button>
+              <button onclick="updateTeamScore(1, 20)" class="px-2.5 py-1 rounded-lg bg-ecec-500 hover:bg-ecec-400 text-white text-xs font-bold">+20</button>
+              <button onclick="updateTeamScore(1, 40)" class="px-2.5 py-1 rounded-lg bg-amber-500 hover:bg-amber-400 text-gray-900 text-xs font-bold">+40</button>
+            </div>
+          </div>
+          <!-- Team 2 -->
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4 flex flex-col items-center">
+            <span class="text-xs uppercase font-bold tracking-wider text-ecec-300">Team 2</span>
+            <div class="text-3xl font-extrabold my-2 text-amber-400"><span id="score-t2">100</span> ⚡</div>
+            <div class="flex gap-1.5">
+              <button onclick="updateTeamScore(2, -20)" class="px-2.5 py-1 rounded-lg bg-red-500/30 hover:bg-red-500/50 text-red-200 text-xs font-bold">-20</button>
+              <button onclick="updateTeamScore(2, 10)" class="px-2.5 py-1 rounded-lg bg-green-500/30 hover:bg-green-500/50 text-green-200 text-xs font-bold">+10</button>
+              <button onclick="updateTeamScore(2, 20)" class="px-2.5 py-1 rounded-lg bg-ecec-500 hover:bg-ecec-400 text-white text-xs font-bold">+20</button>
+              <button onclick="updateTeamScore(2, 40)" class="px-2.5 py-1 rounded-lg bg-amber-500 hover:bg-amber-400 text-gray-900 text-xs font-bold">+40</button>
+            </div>
+          </div>
+          <!-- Team 3 -->
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4 flex flex-col items-center">
+            <span class="text-xs uppercase font-bold tracking-wider text-ecec-300">Team 3</span>
+            <div class="text-3xl font-extrabold my-2 text-amber-400"><span id="score-t3">100</span> ⚡</div>
+            <div class="flex gap-1.5">
+              <button onclick="updateTeamScore(3, -20)" class="px-2.5 py-1 rounded-lg bg-red-500/30 hover:bg-red-500/50 text-red-200 text-xs font-bold">-20</button>
+              <button onclick="updateTeamScore(3, 10)" class="px-2.5 py-1 rounded-lg bg-green-500/30 hover:bg-green-500/50 text-green-200 text-xs font-bold">+10</button>
+              <button onclick="updateTeamScore(3, 20)" class="px-2.5 py-1 rounded-lg bg-ecec-500 hover:bg-ecec-400 text-white text-xs font-bold">+20</button>
+              <button onclick="updateTeamScore(3, 40)" class="px-2.5 py-1 rounded-lg bg-amber-500 hover:bg-amber-400 text-gray-900 text-xs font-bold">+40</button>
+            </div>
+          </div>
+          <!-- Team 4 -->
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-4 flex flex-col items-center">
+            <span class="text-xs uppercase font-bold tracking-wider text-ecec-300">Team 4</span>
+            <div class="text-3xl font-extrabold my-2 text-amber-400"><span id="score-t4">100</span> ⚡</div>
+            <div class="flex gap-1.5">
+              <button onclick="updateTeamScore(4, -20)" class="px-2.5 py-1 rounded-lg bg-red-500/30 hover:bg-red-500/50 text-red-200 text-xs font-bold">-20</button>
+              <button onclick="updateTeamScore(4, 10)" class="px-2.5 py-1 rounded-lg bg-green-500/30 hover:bg-green-500/50 text-green-200 text-xs font-bold">+10</button>
+              <button onclick="updateTeamScore(4, 20)" class="px-2.5 py-1 rounded-lg bg-ecec-500 hover:bg-ecec-400 text-white text-xs font-bold">+20</button>
+              <button onclick="updateTeamScore(4, 40)" class="px-2.5 py-1 rounded-lg bg-amber-500 hover:bg-amber-400 text-gray-900 text-xs font-bold">+40</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 Mystery Boxes Grid -->
+        <div id="mystery-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: ABOUT ECEC ENGLISH CLUB -->
+  <footer id="about" class="bg-gradient-to-br from-ecec-700 via-ecec-600 to-ecec-800 text-white mt-16">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+        <!-- Club Description -->
+        <div class="md:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 bg-white/15 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-star text-amber-300"></i> About Our Community
+          </div>
+          <h2 class="text-3xl font-extrabold tracking-tight">ECEC ENGLISH CLUB</h2>
+          <p class="text-ecec-100 leading-relaxed text-base">
+            <strong>ECEC</strong> is the official English Club under the <strong>University of Science and Education (UED)</strong>. We are a vibrant community dedicated to university students who share a burning passion for learning and developing their English proficiency.
+          </p>
+          <p class="text-ecec-100 leading-relaxed text-base">
+            By joining ECEC, you not only step into a supportive environment to sharpen your English and essential soft skills through dynamic club activities, but you also get the chance to meet wonderful new friends and find your true soulmates during your unforgettable university years.
+          </p>
+        </div>
+
+        <!-- Contact Card -->
+        <div class="md:col-span-5 bg-white text-gray-900 rounded-2xl p-6 shadow-xl border-4 border-ecec-400">
+          <div class="text-center border-b border-gray-200 pb-4 mb-4">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-ecec-600">Official Contact</span>
+            <h3 class="text-xl font-extrabold text-ecec-700 mt-1">ECEC – ALL WE NEED IS PASSION</h3>
+          </div>
+          <ul class="space-y-3.5 text-sm">
+            <li class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-ecec-100 text-ecec-600 flex items-center justify-center shrink-0">
+                <i class="fa-brands fa-facebook-f text-base"></i>
+              </div>
+              <div>
+                <span class="block text-xs text-gray-500 font-semibold">Fanpage</span>
+                <a href="https://www.facebook.com/ecec.ued" target="_blank" rel="noopener noreferrer" class="font-bold text-ecec-600 hover:underline break-all">
+                  https://www.facebook.com/ecec.ued
+                </a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-ecec-100 text-ecec-600 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-envelope text-base"></i>
+              </div>
+              <div>
+                <span class="block text-xs text-gray-500 font-semibold">Email</span>
+                <a href="mailto:ecec.clb@gmail.com" class="font-bold text-gray-800 hover:text-ecec-600">
+                  ecec.clb@gmail.com
+                </a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-ecec-100 text-ecec-600 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-phone-volume text-base"></i>
+              </div>
+              <div>
+                <span class="block text-xs text-gray-500 font-semibold">Hotline</span>
+                <span class="font-bold text-gray-800">0886443897 (Nhat Hau)</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-white/20 text-center text-xs text-ecec-200">
+        © ECEC English Club – University of Science and Education (UED). Designed for Interactive Club Sessions.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // 1. FLASHCARDS DATA (100% English)
+    const flashcardsData = [
+      {
+        id: 1,
+        level: 'A1-B1',
+        term: 'Freshman / Sophomore / Junior / Senior',
+        pos: 'noun',
+        ipa: '/ˈfreʃ.mən/ • /ˈsɑː.fə.mɔːr/ • /ˈdʒuː.njər/ • /ˈsiː.njər/',
+        definition: 'A 1st-year, 2nd-year, 3rd-year, or 4th-year (final-year) student at a university.',
+        example: 'Hi everyone! I am a freshman at the University of Science and Education.'
+      },
+      {
+        id: 2,
+        level: 'A1-B1',
+        term: 'Major in (something)',
+        pos: 'verb / noun',
+        ipa: '/ˈmeɪ.dʒər/',
+        definition: 'To study a specific subject as your main field at university.',
+        example: 'I major in English Education because I love teaching.'
+      },
+      {
+        id: 3,
+        level: 'A1-B1',
+        term: 'Dormitory (Dorm)',
+        pos: 'noun',
+        ipa: '/ˈdɔːr.mə.tɔːr.i/',
+        definition: 'A large building on campus where university students live and sleep.',
+        example: 'Living in a dorm helps me make friends from many different provinces.'
+      },
+      {
+        id: 4,
+        level: 'A1-B1',
+        term: 'Rent a shared apartment',
+        pos: 'verb phrase',
+        ipa: '/rent ə ʃerd əˈpɑːrt.mənt/',
+        definition: 'To pay money monthly to live in a flat or room outside campus with roommates.',
+        example: 'I rent a shared apartment near my university with two classmates.'
+      },
+      {
+        id: 5,
+        level: 'A1-B1',
+        term: 'Extracurricular activities',
+        pos: 'noun phrase',
+        ipa: '/ˌek.strə.kəˈrɪk.jə.lər/',
+        definition: 'Clubs, sports, or social events that students join outside of regular academic classes.',
+        example: 'Joining ECEC English Club is my favorite extracurricular activity.'
+      },
+      {
+        id: 6,
+        level: 'A1-B1',
+        term: 'Part-time job',
+        pos: 'noun phrase',
+        ipa: '/ˌpɑːrtˈtaɪm dʒɑːb/',
+        definition: 'Work that you do for only a few hours a week (such as tutoring or working at a café).',
+        example: 'I have a part-time job as an English tutor on weekends.'
+      },
+      {
+        id: 7,
+        level: 'A1-B1',
+        term: 'Meet the deadline',
+        pos: 'verb phrase',
+        ipa: '/miːt ðə ˈded.laɪn/',
+        definition: 'To finish an assignment, project, or task on or before the required time.',
+        example: 'Our team worked together effectively to meet the deadline.'
+      },
+      {
+        id: 8,
+        level: 'B2',
+        term: 'Hit the books',
+        pos: 'idiom (B2)',
+        ipa: '/hɪt ðə bʊks/',
+        definition: 'To study very hard and focus deeply on your lessons, especially before an exam.',
+        example: 'Final exams start next week, so I really need to hit the books tonight.'
+      },
+      {
+        id: 9,
+        level: 'B2',
+        term: 'Pull an all-nighter',
+        pos: 'idiom (B2)',
+        ipa: '/pʊl ən ˌɔːlˈnaɪ.t̬ər/',
+        definition: 'To stay awake the entire night to study for an exam or finish an urgent project.',
+        example: 'I had to pull an all-nighter to finish my presentation slides.'
+      },
+      {
+        id: 10,
+        level: 'B2',
+        term: 'Step out of my comfort zone',
+        pos: 'idiom (B2)',
+        ipa: '/step aʊt əv maɪ ˈkʌm.fərt zoʊn/',
+        definition: 'To try doing something new or challenging that makes you feel a little nervous at first.',
+        example: 'Speaking in front of a crowd helps me step out of my comfort zone.'
+      },
+      {
+        id: 11,
+        level: 'B2',
+        term: 'Strike a balance (between A & B)',
+        pos: 'collocation (B2)',
+        ipa: '/straɪk ə ˈbæl.əns/',
+        definition: 'To give the right amount of time and attention to two different things without neglecting either.',
+        example: 'It is important to strike a balance between academic study and club activities.'
+      },
+      {
+        id: 12,
+        level: 'B2',
+        term: 'Tuition fee & Living expenses',
+        pos: 'noun phrase (B2)',
+        ipa: '/tuˈɪʃ.ən fiː/ • /ˈlɪv.ɪŋ ɪkˈspen.sɪz/',
+        definition: 'The money you pay for university classes (tuition) and daily needs like food, rent, and transport.',
+        example: 'Working as a teaching assistant helps me cover my monthly living expenses.'
+      }
+    ];
+
+    function renderFlashcards(filter = 'all') {
+      const grid = document.getElementById('flashcard-grid');
+      grid.innerHTML = '';
+
+      const filtered = filter === 'all'
+        ? flashcardsData
+        : flashcardsData.filter(item => item.level === filter);
+
+      filtered.forEach(card => {
+        const isB2 = card.level === 'B2';
+        const badgeClass = isB2
+          ? 'bg-amber-100 text-amber-800 border border-amber-300'
+          : 'bg-ecec-100 text-ecec-700';
+
+        const cardEl = document.createElement('div');
+        cardEl.className = 'flip-card h-64 cursor-pointer perspective-1000 select-none';
+        cardEl.onclick = function(e) {
+          if (e.target.closest('.speak-btn')) return;
+          this.classList.toggle('flipped');
+        };
+
+        cardEl.innerHTML = `
+          <div class="flip-card-inner shadow-sm hover:shadow-md rounded-2xl">
+            <!-- FRONT SIDE -->
+            <div class="flip-card-front bg-white border-2 ${isB2 ? 'border-amber-400' : 'border-ecec-200'} p-6 flex flex-col justify-between">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-extrabold uppercase px-2.5 py-1 rounded-full ${badgeClass}">
+                  ${isB2 ? '🔥 B2 Challenge' : '🟢 A1–B1 Core'}
+                </span>
+                <button type="button" onclick="speakWord('${card.term.replace(/'/g, "\\'")}')" class="speak-btn w-9 h-9 rounded-full bg-ecec-50 hover:bg-ecec-500 text-ecec-600 hover:text-white transition flex items-center justify-center" title="Listen to pronunciation">
+                  <i class="fa-solid fa-volume-high text-sm"></i>
+                </button>
+              </div>
+              <div class="text-center my-auto px-2">
+                <h3 class="text-xl font-extrabold text-gray-900 leading-snug">${card.term}</h3>
+                <p class="text-xs text-gray-500 font-medium mt-1">${card.ipa}</p>
+              </div>
+              <div class="flex items-center justify-between text-xs font-bold text-ecec-600 pt-2 border-t border-ecec-100">
+                <span class="italic text-gray-400">${card.pos}</span>
+                <span class="flex items-center gap-1"><i class="fa-solid fa-rotate"></i> Click to flip</span>
+              </div>
+            </div>
+
+            <!-- BACK SIDE -->
+            <div class="flip-card-back bg-gradient-to-br from-ecec-500 to-ecec-600 text-white p-6 flex flex-col justify-between">
+              <div class="flex items-center justify-between border-b border-white/20 pb-2">
+                <span class="text-xs font-extrabold uppercase tracking-wider text-ecec-100">${card.term}</span>
+                <i class="fa-solid fa-rotate-left text-xs text-ecec-200"></i>
+              </div>
+              <div class="space-y-2.5 my-auto">
+                <div>
+                  <span class="text-[11px] uppercase font-bold text-amber-200 block">Definition:</span>
+                  <p class="text-sm font-semibold leading-snug">${card.definition}</p>
+                </div>
+                <div class="bg-black/15 p-2.5 rounded-xl border border-white/10">
+                  <span class="text-[11px] uppercase font-bold text-amber-200 block">Example:</span>
+                  <p class="text-xs italic text-white/95">"${card.example}"</p>
+                </div>
+              </div>
+              <div class="text-right text-[11px] text-ecec-100 font-semibold">Click to flip back</div>
+            </div>
+          </div>
+        `;
+        grid.appendChild(cardEl);
+      });
+    }
+
+    function filterCards(level) {
+      ['all', 'A1-B1', 'B2'].forEach(btn => {
+        const el = document.getElementById('filter-' + btn);
+        if (btn === level) {
+          el.className = 'px-4 py-2 rounded-xl text-sm font-bold bg-ecec-500 text-white shadow-sm transition';
+        } else {
+          el.className = 'px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-700 border border-ecec-200 hover:bg-ecec-50 transition';
+        }
+      });
+      renderFlashcards(level);
+    }
+
+    function speakWord(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const cleanText = text.replace(/\s*\(.*?\)\s*/g, '');
+        const utterance = new SpeechSynthesisUtterance(cleanText);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.95;
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    // 2. SPEAKING Q&A TOGGLE
+    function toggleAnswer(id, btn) {
+      const box = document.getElementById(id);
+      const isHidden = box.classList.contains('hidden');
+      if (isHidden) {
+        box.classList.remove('hidden');
+        btn.innerHTML = '<i class="fa-solid fa-eye-slash"></i> <span>Hide Sample Answer</span>';
+      } else {
+        box.classList.add('hidden');
+        btn.innerHTML = '<i class="fa-solid fa-eye"></i> <span>Show Sample Answer</span>';
+      }
+    }
+
+    // 3. INTERACTIVE MATCHING GAME
+    const matchingPairs = [
+      { id: 'm1', term: 'Sophomore', def: 'A second-year university or college student.' },
+      { id: 'm2', term: 'Dormitory', def: 'A large building on campus where students live.' },
+      { id: 'm3', term: 'Extracurricular activities', def: 'Clubs, sports, or events outside of normal classes.' },
+      { id: 'm4', term: 'Meet the deadline', def: 'To finish a task or assignment on or before the due time.' },
+      { id: 'm5', term: 'Part-time job', def: 'Work that you do for only a few hours a week.' },
+      { id: 'm6', term: 'Hit the books (B2)', def: 'To study very hard, especially right before an exam.' },
+      { id: 'm7', term: 'Pull an all-nighter (B2)', def: 'To stay awake all night to study or finish a project.' },
+      { id: 'm8', term: 'Step out of my comfort zone (B2)', def: 'To try something new and challenging despite feeling nervous.' }
+    ];
+
+    let selectedTermId = null;
+    let selectedDefId = null;
+    let matchedCount = 0;
+    let timerInterval = null;
+    let secondsElapsed = 0;
+    let timerStarted = false;
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function startTimerIfNeeded() {
+      if (timerStarted) return;
+      timerStarted = true;
+      timerInterval = setInterval(() => {
+        secondsElapsed++;
+        const mins = String(Math.floor(secondsElapsed / 60)).padStart(2, '0');
+        const secs = String(secondsElapsed % 60).padStart(2, '0');
+        document.getElementById('match-timer').textContent = `${mins}:${secs}`;
+      }, 1000);
+    }
+
+    function initMatchingGame() {
+      clearInterval(timerInterval);
+      secondsElapsed = 0;
+      timerStarted = false;
+      matchedCount = 0;
+      selectedTermId = null;
+      selectedDefId = null;
+      document.getElementById('match-timer').textContent = '00:00';
+      document.getElementById('match-score').textContent = `0 / ${matchingPairs.length}`;
+      document.getElementById('match-feedback').classList.add('hidden');
+
+      const termsContainer = document.getElementById('match-terms');
+      const defsContainer = document.getElementById('match-defs');
+      termsContainer.innerHTML = '';
+      defsContainer.innerHTML = '';
+
+      const shuffledTerms = shuffleArray(matchingPairs);
+      const shuffledDefs = shuffleArray(matchingPairs);
+
+      shuffledTerms.forEach(item => {
+        const btn = document.createElement('button');
+        btn.id = `term-${item.id}`;
+        btn.dataset.id = item.id;
+        btn.className = 'w-full text-left p-3.5 rounded-xl border-2 border-ecec-200 bg-white hover:border-ecec-400 font-bold text-gray-800 text-sm transition flex items-center justify-between';
+        btn.innerHTML = `<span>${item.term}</span><i class="fa-solid fa-link text-gray-300"></i>`;
+        btn.onclick = () => selectTerm(item.id);
+        termsContainer.appendChild(btn);
+      });
+
+      shuffledDefs.forEach(item => {
+        const btn = document.createElement('button');
+        btn.id = `def-${item.id}`;
+        btn.dataset.id = item.id;
+        btn.className = 'w-full text-left p-3.5 rounded-xl border-2 border-ecec-200 bg-white hover:border-ecec-400 font-medium text-gray-700 text-sm transition flex items-center justify-between gap-2';
+        btn.innerHTML = `<span>${item.def}</span><i class="fa-solid fa-circle-check text-gray-200 shrink-0"></i>`;
+        btn.onclick = () => selectDef(item.id);
+        defsContainer.appendChild(btn);
+      });
+    }
+
+    function selectTerm(id) {
+      const btn = document.getElementById(`term-${id}`);
+      if (btn.disabled) return;
+      startTimerIfNeeded();
+
+      document.querySelectorAll('#match-terms button:not(:disabled)').forEach(el => {
+        el.className = 'w-full text-left p-3.5 rounded-xl border-2 border-ecec-200 bg-white hover:border-ecec-400 font-bold text-gray-800 text-sm transition flex items-center justify-between';
+      });
+
+      selectedTermId = id;
+      btn.className = 'w-full text-left p-3.5 rounded-xl border-2 border-ecec-600 bg-ecec-100 font-bold text-ecec-800 text-sm transition flex items-center justify-between ring-2 ring-ecec-400';
+
+      checkMatch();
+    }
+
+    function selectDef(id) {
+      const btn = document.getElementById(`def-${id}`);
+      if (btn.disabled) return;
+      startTimerIfNeeded();
+
+      document.querySelectorAll('#match-defs button:not(:disabled)').forEach(el => {
+        el.className = 'w-full text-left p-3.5 rounded-xl border-2 border-ecec-200 bg-white hover:border-ecec-400 font-medium text-gray-700 text-sm transition flex items-center justify-between gap-2';
+      });
+
+      selectedDefId = id;
+      btn.className = 'w-full text-left p-3.5 rounded-xl border-2 border-ecec-600 bg-ecec-100 font-medium text-ecec-800 text-sm transition flex items-center justify-between gap-2 ring-2 ring-ecec-400';
+
+      checkMatch();
+    }
+
+    function checkMatch() {
+      if (!selectedTermId || !selectedDefId) return;
+
+      const termBtn = document.getElementById(`term-${selectedTermId}`);
+      const defBtn = document.getElementById(`def-${selectedDefId}`);
+
+      if (selectedTermId === selectedDefId) {
+        // Correct Match
+        termBtn.disabled = true;
+        defBtn.disabled = true;
+        termBtn.className = 'w-full text-left p-3.5 rounded-xl border-2 border-green-500 bg-green-50 font-bold text-green-800 text-sm flex items-center justify-between opacity-85 cursor-default';
+        termBtn.innerHTML = `<span>${termBtn.querySelector('span').textContent}</span><i class="fa-solid fa-check text-green-600"></i>`;
+
+        defBtn.className = 'w-full text-left p-3.5 rounded-xl border-2 border-green-500 bg-green-50 font-medium text-green-800 text-sm flex items-center justify-between gap-2 opacity-85 cursor-default';
+        defBtn.innerHTML = `<span>${defBtn.querySelector('span').textContent}</span><i class="fa-solid fa-circle-check text-green-600 shrink-0"></i>`;
+
+        matchedCount++;
+        document.getElementById('match-score').textContent = `${matchedCount} / ${matchingPairs.length}`;
+        selectedTermId = null;
+        selectedDefId = null;
+
+        if (matchedCount === matchingPairs.length) {
+          clearInterval(timerInterval);
+          document.getElementById('match-feedback').classList.remove('hidden');
+        }
+      } else {
+        // Incorrect Match
+        termBtn.className = 'w-full text-left p-3.5 rounded-xl border-2 border-red-500 bg-red-50 font-bold text-red-800 text-sm flex items-center justify-between animate-shake';
+        defBtn.className = 'w-full text-left p-3.5 rounded-xl border-2 border-red-500 bg-red-50 font-medium text-red-800 text-sm flex items-center justify-between gap-2 animate-shake';
+
+        const tempTerm = termBtn;
+        const tempDef = defBtn;
+        selectedTermId = null;
+        selectedDefId = null;
+
+        setTimeout(() => {
+          if (!tempTerm.disabled) {
+            tempTerm.className = 'w-full text-left p-3.5 rounded-xl border-2 border-ecec-200 bg-white hover:border-ecec-400 font-bold text-gray-800 text-sm transition flex items-center justify-between';
+          }
+          if (!tempDef.disabled) {
+            tempDef.className = 'w-full text-left p-3.5 rounded-xl border-2 border-ecec-200 bg-white hover:border-ecec-400 font-medium text-gray-700 text-sm transition flex items-center justify-between gap-2';
+          }
+        }, 500);
+      }
+    }
+
+    // 4. TEAM BOARD GAME ("CAMPUS SURVIVAL")
+    const mysteryBoxes = [
+      {
+        code: 'BOX A1',
+        type: '🎤 Speaking Mission',
+        badge: 'bg-ecec-500 text-white',
+        task: 'Introduce your name, university year, and major in 15 seconds without hesitating!',
+        reward: 'Reward: +20 ⚡'
+      },
+      {
+        code: 'BOX A2',
+        type: '💣 Deadline Bomb!',
+        badge: 'bg-red-600 text-white',
+        task: 'Your laptop crashed before submission! Make a full sentence using "meet the deadline" to survive, OR lose -20 ⚡.',
+        reward: 'Survive: +10 ⚡ | Fail: -20 ⚡'
+      },
+      {
+        code: 'BOX A3',
+        type: '🚀 B2 Boss Challenge',
+        badge: 'bg-amber-500 text-gray-900',
+        task: 'Explain why you joined ECEC English Club using the idiom "step out of my comfort zone".',
+        reward: 'Reward: +40 ⚡'
+      },
+      {
+        code: 'BOX B1',
+        type: '🔄 Point Steal!',
+        badge: 'bg-purple-600 text-white',
+        task: 'Tell the club 2 advantages of living in a "dormitory" compared to "renting a shared apartment".',
+        reward: 'Reward: Steal 20 ⚡ from any team!'
+      },
+      {
+        code: 'BOX B2',
+        type: '🎁 Scholarship Lucky Box!',
+        badge: 'bg-green-600 text-white',
+        task: 'You got an A+ on your final exam! Instant +20 ⚡! Get an extra +20 ⚡ if your team makes a sentence with "hit the books".',
+        reward: 'Reward: +20 ⚡ to +40 ⚡'
+      },
+      {
+        code: 'BOX B3',
+        type: '🎤 Speaking Mission',
+        badge: 'bg-ecec-500 text-white',
+        task: 'Name 3 "extracurricular activities" students can join at university and say which one you love most.',
+        reward: 'Reward: +20 ⚡'
+      },
+      {
+        code: 'BOX C1',
+        type: '🚀 B2 Boss Challenge',
+        badge: 'bg-amber-500 text-gray-900',
+        task: 'Make a natural sentence using BOTH "pull an all-nighter" AND "part-time job".',
+        reward: 'Reward: +40 ⚡'
+      },
+      {
+        code: 'BOX C2',
+        type: '⚔️ Word Duel!',
+        badge: 'bg-indigo-600 text-white',
+        task: 'Pick 1 representative from your team and 1 from another team. Take turns saying words related to University Life. Whoever hesitates for 5 seconds loses!',
+        reward: 'Reward: Winner gets +20 ⚡'
+      },
+      {
+        code: 'BOX C3',
+        type: '🚀 B2 Boss Challenge',
+        badge: 'bg-amber-500 text-gray-900',
+        task: 'Give 1 piece of advice to a "freshman" on how to "strike a balance between" studying and club life.',
+        reward: 'Reward: +40 ⚡'
+      }
+    ];
+
+    const teamScores = { 1: 100, 2: 100, 3: 100, 4: 100 };
+
+    function updateTeamScore(team, delta) {
+      teamScores[team] += delta;
+      document.getElementById(`score-t${team}`).textContent = teamScores[team];
+    }
+
+    function renderMysteryGrid() {
+      const grid = document.getElementById('mystery-grid');
+      grid.innerHTML = '';
+
+      mysteryBoxes.forEach((box, idx) => {
+        const item = document.createElement('div');
+        item.id = `mbox-${idx}`;
+        item.className = 'bg-white/10 hover:bg-white/15 border-2 border-ecec-500/50 rounded-2xl p-5 cursor-pointer transition flex flex-col justify-between min-h-[170px]';
+        item.onclick = function() {
+          revealMysteryBox(idx);
+        };
+        item.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-extrabold uppercase tracking-wider text-ecec-300">Mystery Tile</span>
+            <i class="fa-solid fa-lock text-amber-400"></i>
+          </div>
+          <div class="text-center my-4">
+            <div class="text-2xl font-extrabold text-white tracking-tight">📦 ${box.code}</div>
+            <p class="text-xs text-gray-300 mt-1">Click to unlock mission</p>
+          </div>
+          <div class="text-center text-[11px] font-bold text-ecec-400 uppercase tracking-wider">Tap to Open</div>
+        `;
+        grid.appendChild(item);
+      });
+    }
+
+    function revealMysteryBox(idx) {
+      const box = mysteryBoxes[idx];
+      const el = document.getElementById(`mbox-${idx}`);
+      el.onclick = null;
+      el.className = 'bg-white text-gray-900 border-2 border-amber-400 rounded-2xl p-5 shadow-lg flex flex-col justify-between min-h-[170px]';
+      el.innerHTML = `
+        <div class="flex items-center justify-between gap-2 mb-2">
+          <span class="font-extrabold text-xs text-gray-500">${box.code}</span>
+          <span class="text-xs font-extrabold px-2.5 py-0.5 rounded-full ${box.badge}">${box.type}</span>
+        </div>
+        <p class="text-sm font-semibold text-gray-800 my-auto leading-snug">${box.task}</p>
+        <div class="mt-3 pt-2 border-t border-gray-200 flex items-center justify-between text-xs font-extrabold text-ecec-600">
+          <span>${box.reward}</span>
+          <span><i class="fa-regular fa-clock mr-1"></i>30s</span>
+        </div>
+      `;
+    }
+
+    function resetBoardGame() {
+      [1, 2, 3, 4].forEach(t => {
+        teamScores[t] = 100;
+        document.getElementById(`score-t${t}`).textContent = '100';
+      });
+      renderMysteryGrid();
+    }
+
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderFlashcards('all');
+      initMatchingGame();
+      renderMysteryGrid();
+    });
+  </script>
+</body>
+</html>
